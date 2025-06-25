@@ -1,0 +1,477 @@
+/* style.css (Full Code - No Changes in This Step) */
+
+/* --- Base Styles --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Main Container --- */
+.container {
+    max-width: 1100px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+/* --- Header Component (for index.html) --- */
+header.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+header.main-header .logo-container {
+    margin-bottom: 20px;
+}
+
+header.main-header .logo-container img {
+    max-width: 350px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+header.main-header p {
+    color: #7f8c8d;
+    font-size: 0.95em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 1.4;
+}
+
+/* --- Sub-page Header Component (for other pages' content area) --- */
+header.sub-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+header.sub-header h1 {
+    color: #34495e;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header.sub-header p {
+     color: #7f8c8d;
+}
+
+/* --- Unified Header (for all sub-pages) --- */
+.unified-header {
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.unified-header-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    height: 48px;
+}
+
+.header-logo {
+    height: 48px;
+    width: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.unified-header .back-button {
+    flex-shrink: 0;
+}
+
+/* --- Back Button Component --- */
+.back-button-container {
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    font-size: 0.9em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+/* --- Section Title --- */
+.section-title {
+    color: #34495e;
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-left: 5px solid #3498db;
+    padding-left: 15px;
+}
+
+/* --- Course List Component (for index.html) --- */
+.course-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+    gap: 20px;
+}
+
+.course-list li {
+    background-color: #ecf0f1;
+    padding: 15px 20px; 
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.course-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.course-icon {
+    width: 50px; 
+    height: 50px; 
+    margin-right: 15px; 
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-icon img {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.course-list li:hover .course-icon img {
+    transform: scale(1.1);
+}
+
+.course-content h3 {
+    margin: 0 0 5px 0; 
+    color: #2c3e50;
+    font-size: 1.25em; 
+}
+
+.course-content p {
+    margin: 0;
+    color: #555;
+    font-size: 0.9em; 
+}
+
+.course-content a {
+    display: inline-block;
+    margin-top: 8px; 
+    padding: 6px 12px; 
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    margin-right: 5px;
+    font-size: 0.85em; 
+}
+
+.course-content a:hover {
+    background-color: #2980b9;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #7f8c8d;
+    font-size: 0.9em;
+}
+
+/* --- Topic Grid & Modal Styles (for basic_computer_network.html) --- */
+.featured-topic-box {
+    background-color: #e0e6e8;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.featured-topic-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(52, 73, 94, 0.15);
+}
+.featured-topic-box .header {
+    display: flex;
+    align-items: center;
+    font-size: 1.6em;
+    color: #2c3e50;
+    font-weight: bold;
+}
+.featured-topic-box .icon {
+    margin-right: 15px;
+    color: #3498db;
+    font-size: 1.5em;
+}
+.featured-topic-box p {
+    margin-top: 10px;
+    margin-left: 55px;
+    color: #555;
+}
+
+.topic-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+}
+
+.topic-box {
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-height: 80px;
+}
+.topic-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(52, 73, 94, 0.1);
+}
+.topic-box .icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+    color: #3498db;
+    width: 30px;
+    text-align: center;
+}
+.topic-box .title {
+    font-size: 1.1em;
+    color: #34495e;
+    font-weight: bold;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+.modal-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+.modal-overlay.is-visible .modal-content {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 1.8em;
+    color: #aaa;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.modal-close-btn:hover {
+    color: #333;
+}
+
+.modal-header h3 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+
+.modal-body {
+    font-size: 1.1em;
+    line-height: 1.7;
+}
+
+.modal-body ul {
+    list-style: disc;
+    padding-left: 25px;
+}
+
+.modal-body li {
+    margin-bottom: 10px;
+}
+
+/* --- Floating Widget (Collapsible) --- */
+.floating-widget-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 350px;
+    z-index: 990;
+}
+
+.widget-toggle-button {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease;
+}
+.widget-toggle-button:hover {
+    background-color: #2c3e50;
+}
+.widget-toggle-button i {
+    transition: transform 0.3s ease;
+}
+
+.widget-content {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-top: -8px;
+    padding-top: 8px;
+    max-height: 0;
+    transition: max-height 0.4s ease-out, visibility 0.4s;
+    visibility: hidden;
+}
+
+.floating-widget-container.is-open .widget-content {
+    max-height: 400px;
+    visibility: visible;
+}
+.floating-widget-container.is-open .widget-toggle-button i {
+    transform: rotate(180deg);
+}
+
+
+#live-clock {
+    font-size: 2em;
+    font-weight: 600;
+    color: #34495e;
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.google-calendar-iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* --- Styling for Modal Content Sections (NEW) --- */
+
+.modal-body .content-section {
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Section 1: Introduction Paragraph */
+.modal-body .modal-intro {
+    background-color: #eef7ff; /* Light, calming blue */
+    border-left: 5px solid #6ab0de;
+    color: #2c3e50;
+}
+
+/* Section 2: Bullet Points List */
+.modal-body .modal-points {
+    background-color: #f9f9f9; /* Off-white */
+    border: 1px solid #e9ecef;
+}
+
+/* Adjust list style within the points section */
+.modal-body .modal-points ul {
+    list-style: none; /* Remove default bullets */
+    padding-left: 0;
+}
+.modal-body .modal-points li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 10px;
+}
+.modal-body .modal-points li::before {
+    content: "\f058"; /* Font Awesome check-circle icon */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #28a745; /* Success Green */
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+
+/* Section 3: Recommendation/Advice Paragraph */
+.modal-body .modal-recommendation {
+    background-color: #fffbeb; /* Soft yellow, like a sticky note */
+    border-left: 5px solid #ffc107; /* Amber accent */
+    color: #665000;
+}
+.modal-body .modal-recommendation strong {
+    color: #c77700;
+}
+
