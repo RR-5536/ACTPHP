@@ -535,3 +535,18 @@ footer {
     margin: 0;
     font-weight: 500;
 }
+
+/* --- Manual By Sector Card (NEW) --- */
+.manual-by-sector-card {
+    margin-top: 20px;
+    padding: 25px 30px;
+    background-color: #f5f7fa; /* Slightly different background to stand out */
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+}
+
+/* Adjust the section title margin inside this new card */
+.manual-by-sector-card .section-title {
+    margin-top: 0;
+    border-left-color: #f0ad4e; /* Use a different accent color (warning/orange) */
+}

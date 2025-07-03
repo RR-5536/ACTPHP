@@ -1,0 +1,22 @@
+/* FILE: ticket/assets/css/style.css */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex: 1;
+}
+.card-reply {
+    border-left-width: 4px;
+}
+.card-reply-user {
+    border-left-color: var(--bs-primary);
+}
+.card-reply-staff {
+    border-left-color: var(--bs-warning);
+}
+.card-reply-internal {
+    background-color: #fffbe6; /* Light yellow */
+    border-left-color: var(--bs-danger);
+}

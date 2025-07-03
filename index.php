@@ -1,8 +1,9 @@
 <?php
-// กำหนด Title และ Path สำหรับหน้านี้
+// กำหนด title เริ่มต้นหากไม่มีการตั้งค่าจากหน้าอื่น
 if (!isset($pageTitle)) {
     $pageTitle = 'ระบบ E-Learning IT สำหรับพนักงาน';
 }
+// กำหนด base path เริ่มต้นถ้ายังไม่มีการตั้งค่า
 if (!isset($base_path)) {
     $base_path = './';
 }
@@ -111,6 +112,16 @@ include 'partials/head.php';
                     <a href="https://contacts.google.com/ratchanon.rattanaubol@archem.inc" target="_blank">ดูข้อมูลติดต่อ</a>
                 </div>
             </li>
+            <li>
+                <div class="course-icon">
+                    <img src="https://img.icons8.com/plasticine/100/error.png" alt="Error Icon">
+                </div>
+                <div class="course-content">
+                    <h3>แจ้งปัญหา </h3>
+                    <p>สำหรับแจ้งปัญหาทุกระบบ</p>
+                    <a href="http://10.34.1.19/ticket/login.php" onclick="showTestModal()">แจ้งปัญหา</a>
+                </div>
+            </li>
         </ul>
 
         <h2 class="section-title">Event Room&IT</h2>
@@ -166,6 +177,14 @@ include 'partials/head.php';
                 });
             }
         });
+
+        // Function to show the test modal when "แจ้งปัญหา" is clicked
+        function showTestModal() {
+            const testModal = document.getElementById('testSystemModal');
+            if (testModal) {
+                testModal.classList.add('is-visible');
+            }
+        }
     </script>
 </body>
 </html>

@@ -1,0 +1,207 @@
+/*
+ * Archem Theme for Ticket System
+ * FILE: ticket/assets/css/archem-theme.css
+ */
+
+/* ---------- 1. กำหนดตัวแปรสีหลัก (CSS Variables) ---------- */
+:root {
+    --archem-primary: #36a4c1; /* สีฟ้า-เขียว Archem */
+    --archem-primary-hover: #2d8ca5; /* สีฟ้า-เขียว เวลาเอาเมาส์ชี้ */
+    --archem-dark-blue: #2c3e50; /* สีน้ำเงินเข้มสำหรับ Navbar */
+    --archem-light-gray: #f8f9fa; /* สีเทาอ่อนสำหรับพื้นหลัง Card */
+    --archem-border-color: #dee2e6; /* สีเส้นขอบ */
+}
+
+/* ---------- 2. ปรับฟอนต์ (ถ้าต้องการ) ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap');
+
+body {
+    font-family: 'Kanit', sans-serif;
+    background-color: #fff; /* พื้นหลังหลักเป็นสีขาว */
+}
+
+/* ---------- 3. ปรับสี Component ของ Bootstrap ---------- */
+
+/* Navbar */
+.navbar.navbar-dark {
+    background-color: var(--archem-dark-blue) !important; /* ใช้สีใหม่ */
+}
+.navbar-dark .navbar-brand {
+    font-weight: 500;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .8);
+    transition: color .2s;
+}
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;
+}
+.dropdown-menu {
+    border-radius: 0.25rem;
+    border: 1px solid var(--archem-border-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15);
+}
+.dropdown-item {
+    color: #212529; /* สีข้อความปกติใน dropdown */
+}
+.dropdown-item:hover, .dropdown-item:focus {
+    background-color: var(--archem-primary);
+    color: #fff;
+}
+
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--archem-primary);
+    border-color: var(--archem-primary);
+}
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--archem-primary-hover);
+    border-color: var(--archem-primary-hover);
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+/* Badges (ป้ายสถานะ) */
+.badge.bg-primary {
+    background-color: var(--archem-primary) !important;
+}
+
+/* Links */
+a {
+    color: var(--archem-primary);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--archem-primary-hover);
+}
+
+/* Cards */
+.card {
+    border: 1px solid var(--archem-border-color);
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, .075);
+    transition: box-shadow .2s ease-in-out;
+}
+.card:hover {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15);
+}
+.card-header {
+    background-color: var(--archem-light-gray);
+    border-bottom: 1px solid var(--archem-border-color);
+    font-weight: 500;
+}
+
+/* Forms */
+.form-control:focus, .form-select:focus {
+    border-color: var(--archem-primary);
+    box-shadow: 0 0 0 0.25rem rgba(54, 164, 193, 0.25);
+}
+
+/* ส่วนของหน้า Ticket View ที่ปรับแต่งเพิ่มเติม */
+.card-reply-user {
+    border-left-color: var(--archem-primary);
+}
+.card-reply-staff {
+    border-left-color: #ffc107; /* สีเหลืองสำหรับ Staff ยังคงเดิมเพราะตัดกันดี */
+}
+.card-reply-internal {
+    background-color: #fffbe6;
+    border-left-color: #dc3545; /* สีแดงสำหรับ Internal Note */
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+}
+
+/* ทำให้เส้น hr บางลงและสีจางลง */
+hr {
+    border-top: 1px solid #eee;
+}
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3e50;
+}
+
+/* ทำให้เส้น hr บางลงและสีจางลง */
+hr {
+    border-top: 1px solid #eee;
+}
+
+/* --- ส่วนที่เพิ่มใหม่ --- */
+/* สไตล์สำหรับโซนอันตรายในแผงควบคุม */
+.danger-zone {
+    border-top: 2px dashed #ffc107; /* เส้นประสีเหลืองเตือน */
+    padding-top: 1rem;
+    margin-top: 1rem;
+}
+.danger-zone .form-text {
+    color: #dc3545; /* สีแดงสำหรับข้อความเตือน */
+    font-weight: 500;
+}
+/* --- Admin Dashboard Styles (ส่วนที่เพิ่มใหม่) --- */
+.dashboard-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card .card-icon {
+    font-size: 2.5rem;
+    opacity: 0.8;
+    margin-right: 1.5rem;
+    line-height: 1;
+}
+
+.dashboard-card .card-text h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.dashboard-card .card-text span {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.border-left-primary { border-left: 5px solid var(--archem-primary); }
+.border-left-warning { border-left: 5px solid #ffc107; }
+.border-left-success { border-left: 5px solid #198754; }
+.border-left-secondary { border-left: 5px solid #6c757d; }
+
+.dashboard-card .stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+/* --- สไตล์สำหรับรูปภาพในคอมเมนต์ (ส่วนที่เพิ่มใหม่) --- */
+.reply-attachment-gallery {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.reply-attachment-thumb {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* ทำให้รูปไม่เสียสัดส่วน */
+    border: 1px solid var(--archem-border-color);
+    padding: 3px;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    transition: transform .2s;
+}
+
+.reply-attachment-thumb:hover {
+    transform: scale(1.05);
+}
